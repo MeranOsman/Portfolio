@@ -1,0 +1,22 @@
+<div class="skills-container" id="my-skills">
+  <div class="scroll-to-my-skills" id="scroll-to-my-skills"></div>
+  <div data-aos="fade-right" class="skills">
+    <div *ngFor="let skillBox of skills; let i = index" class="skill-box">
+      <img src="assets/img/objects/{{ skills[i].img }}" />
+      <span>{{ skills[i].name }}</span>
+    </div>
+  </div>
+
+  <div data-aos="fade-left" data-aos-offset="160" class="headline">
+    <h1 class="headline-my-skills">My skills</h1>
+    <span class="text-skills">
+      I have gained experience in building projects with various front end technologies and concepts.
+    </span>
+    <a class="btn-a-skills" href="#scroll-to-contact">
+      <button class="btn-get-in-touch">Get in touch</button>
+    </a>
+  </div>
+</div>
+
+<div data-aos="fade-left" data-aos-offset="80" class="purple-line"></div>
+<img class="background-form" src="assets/img/objects/form-my-skills.png">

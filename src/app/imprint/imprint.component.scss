@@ -1,0 +1,26 @@
+:host {
+  width: 100vw;
+  background-color: #141d2f;
+  display: flex;
+}
+
+section {
+  width: 75vw;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  color: white;
+  padding: 110px 0 60px 0;
+
+  a {
+    color: var(--purple);
+
+    &:hover {
+      color: var(--green);
+    }
+  }
+}
+
+h1 {
+  font-size: 32px;
+}

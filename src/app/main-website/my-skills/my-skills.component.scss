@@ -1,0 +1,403 @@
+:host {
+  width: 100vw;
+  color: white;
+  background-color: #141d2f;
+  display: flex;
+  padding-bottom: 120px;
+  position: relative;
+}
+
+.skills-container {
+  display: flex;
+  width: 75vw;
+  margin: auto;
+  position: relative;
+}
+
+.scroll-to-my-skills {
+  position: absolute;
+  top: -110px;
+}
+
+.skills {
+  display: flex;
+  width: 60%;
+  flex-wrap: wrap;
+  z-index: 3;
+}
+
+.skill-box {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 0 80px 60px 0;
+  width: 85px;
+  img {
+    max-width: 60px;
+    max-height: 60px;
+    object-fit: contain;
+    -webkit-animation-duration: 1s;
+    animation-duration: 1s;
+    -webkit-animation-fill-mode: both;
+    animation-fill-mode: both;
+    -webkit-animation-timing-function: ease-in-out;
+    animation-timing-function: ease-in-out;
+    animation-iteration-count: infinite;
+    -webkit-animation-iteration-count: infinite;
+      &:hover {
+        animation-name: bounce;
+        -moz-animation-name: bounce;
+      }
+  }
+  span {
+    text-align: center;
+    margin-top: 10px;
+    font-size: 16px;
+    font-weight: 600;
+  }
+}
+
+@keyframes bounce {
+	0%, 100%, 20%, 50%, 80% {
+		-webkit-transform: translateY(0);
+		-ms-transform:     translateY(0);
+		transform:         translateY(0)
+	}
+	40% {
+		-webkit-transform: translateY(-30px);
+		-ms-transform:     translateY(-30px);
+		transform:         translateY(-30px)
+	}
+	60% {
+		-webkit-transform: translateY(-15px);
+		-ms-transform:     translateY(-15px);
+		transform:         translateY(-15px)
+	}
+}
+
+.headline {
+  max-width: 40%;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  z-index: 9;
+  span {
+    margin-top: 20px;
+    margin-bottom: 38px;
+    font-weight: 300;
+    font-size: 16px;
+    text-align: end;
+  }
+}
+
+.headline-my-skills {
+  margin: 0;
+}
+
+.btn-a-skills {
+  position: absolute;
+  bottom: 160px;
+  left: calc(50% + 50px);
+  transform: translate(-50%);
+}
+
+.btn-get-in-touch {
+  width: 200px;
+  height: 58px;
+  color: white;
+  background-color: var(--green);
+  border-radius: 10px;
+  border: none;
+  font-size: 23px;
+  font-weight: 300;
+  -webkit-transform: scale(1);
+	transform: scale(1);
+	-webkit-transition: 0.2s ease-in-out;
+	transition: 0.2s ease-in-out;
+  &:hover {
+    cursor: pointer;
+    background-color: var(--purple);
+    -webkit-transform: scale(1.12);
+	  transform: scale(1.12);
+  }
+}
+
+.purple-line {
+  border: 2px solid var(--purple);
+  border-top-left-radius: 3px;
+  border-bottom-left-radius: 3px;
+  height: 0px;
+  width: 9%;
+  position: absolute;
+  right: 0;
+  top: 68px;
+}
+
+.background-form {
+  position: absolute;
+  left: 0px;
+  bottom: -410px;
+  z-index: 2;
+}
+
+
+@media(max-width: 1250px) {
+  .blue-line {
+    top: 100px;
+  }
+}
+
+
+@media(max-width: 1080px) {
+  :host {
+    padding-left: 0;
+  }
+
+  .skills-container {
+    flex-direction: column-reverse;
+    align-items: center;
+  }
+
+  .skills {
+    justify-content: center;
+    padding-left: 120px;
+    padding-right: 40px;
+    width: calc(100% - 160px);
+    margin-top: 50px;
+    margin-bottom: 80px;
+  }
+
+  .btn-a-skills {
+    bottom: -476px;
+    left: calc(50% + 22px);
+  }
+
+  .headline {
+    padding-right: 0;
+    margin-right: 22px;
+    width: 49%;
+    align-items: end;
+  }
+
+  .text-skills {
+    text-align: end !important;
+  }
+
+  .blue-line {
+    width: 20%;
+  }
+}
+
+
+@media (max-width: 1010px) {
+  .skills {
+    justify-content: center;
+    padding-left: 90px;
+    padding-right: 10px;
+    width: calc(100% - 100px);
+  }
+}
+
+
+@media(max-width: 935px) {
+  .btn-a-skills {
+    bottom: -693px;
+  }
+
+  .skills {
+    display: grid;
+    justify-items: center;
+    gap: 1rem;
+    grid-template-columns: repeat(auto-fit, minmax(10rem, 1fr));
+  }
+}
+
+
+@media(max-width: 935px) {
+  .btn-a-skills {
+    bottom: -683px;
+  }
+}
+
+
+@media (max-width: 797px) {
+  .btn-a-skills {
+    bottom: -854px;
+  }
+}
+
+
+@media (max-width: 750px) {
+  .skills {
+    padding-left: 60px;
+    margin-right: -20px;
+    width: calc(100% - 120px);
+  }
+}
+
+
+@media (max-width: 737px) {
+  .btn-a-skills {
+    bottom: -854px;
+  }
+}
+
+
+@media (max-width: 640px) {
+  .btn-a-skills {
+    bottom: -1072px;
+  }
+}
+
+
+@media (max-width: 635px) {
+  .blue-line {
+    width: 12%;
+  }
+
+  .headline {
+    width: 60%;
+    align-items: end;
+  }
+}
+
+
+@media (max-width: 630px) {
+  .skills {
+    padding-left: 30px;
+    margin-right: -50px;
+    width: calc(100% - 60px);
+  }
+
+  .btn-a-skills {
+    bottom: -854px;
+  }
+}
+
+
+@media(max-width: 600px) {
+  .blue-line {
+    top: 85px;
+  }
+}
+
+
+@media(max-width: 580px) {
+  .btn-a-skills {
+    left: calc(50% + 32px);
+    bottom: -1064px;
+  }
+}
+
+
+@media(max-width: 550px) {
+  .headline {
+    width: 74%;
+    margin-right: 72px;
+  }
+}
+
+
+@media (max-width: 500px) {
+  .blue-line {
+    top: 76px;
+  }
+}
+
+
+@media(max-width: 450px) {
+  .text-skills {
+    font-size: 15px !important;
+    text-align: start !important;
+  }
+
+  .headline {
+    align-items: start;
+    width: 70%;
+    margin-right: 0;
+  }
+
+  .blue-line {
+    width: 18%;
+  }
+
+  .btn-a-skills {
+    left: calc(50% + -5px);
+  }
+}
+
+
+@media(max-width: 410px) {
+  .blue-line {
+    width: 14%;
+  }
+
+  .headline {
+    width: 100%;
+    padding-left: 60px;
+  }
+
+  .text-skills {
+    width: 87%;
+  }
+
+  .skill-box {
+    font-size: 12px;
+    width: 70px;
+    margin-right: 40px;
+  }
+
+  .skill-box img {
+    max-width: 50px;
+    max-height: 50px;
+  }
+
+  .skills {
+    margin-right: -10px;
+    width: 105%;
+  }
+
+  .btn-a-skills {
+    bottom: -980px;
+  }
+}
+
+
+@media(max-width:360px) {
+  .blue-line {
+    width: 21%;
+    top: 63px;
+  }
+}
+
+
+@media(max-width: 340px) {
+  .blue-line {
+    width: 16%;
+  }
+}
+
+
+@media(max-width: 329px) {
+  .btn-a-skills {
+    bottom: -1848px;
+  }
+}
+
+@media(max-width: 310px) {
+  .skills {
+    width: 119%;
+  }
+
+  .blue-line {
+    width: 14%;
+  }
+}
+
+
+@media(max-width: 292px) {
+  .blue-line {
+    width: 10%;
+  }
+}

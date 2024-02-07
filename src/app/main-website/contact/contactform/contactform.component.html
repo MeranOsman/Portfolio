@@ -1,0 +1,14 @@
+<div class="container">
+    <form (ngSubmit)="onSubmit(contactForm)" #contactForm="ngForm">
+        <input [(ngModel)]="contactData.name" required type="text" id="name" name="name" placeholder="Your name">
+
+        <input [(ngModel)]="contactData.email" required type="email"
+        pattern="[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}" id="email" name="email" placeholder="Your email">
+
+        <textarea #message="ngModel" [(ngModel)]="contactData.message" required id="message" name="message"
+            placeholder="Your message" minlength="4" style="height:200px"></textarea>
+        <span *ngIf="!message.valid && message.touched">Please enter a message</span>
+
+        <input type="submit" value="Submit">
+    </form>
+</div>

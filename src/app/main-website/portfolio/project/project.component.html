@@ -1,0 +1,19 @@
+<div [ngClass]="{'change-direction': isOdd}" [attr.data-aos]="isOdd ? 'fade-right' : 'fade-left'" data-aos-offset="200"
+  class="project-container">
+  <div [ngClass]="{'change-direction-img': isOdd}" class="img-container">
+    <img src="assets/img/{{ project.img }}" />
+  </div>
+  <div [ngClass]="{'flex-end': isOdd}" class="project-info">
+    <h2>{{ project.name }}</h2>
+    <span class="tec">{{ project.tec }}</span>
+    <span [ngClass]="{'text-align': isOdd}" class="description">{{ project.description }}</span>
+    <div class="btn-container">
+      <a href="{{ project.projectLink }}" target="_blank">
+        <button class="btn-live-test">Live test</button>
+      </a>
+      <a href="{{ project.githubLink }}" target="_blank">
+        <button class="btn-github">Github</button>
+      </a>
+    </div>
+  </div>
+</div>
