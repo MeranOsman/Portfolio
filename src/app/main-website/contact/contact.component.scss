@@ -1,6 +1,6 @@
 :host {
   display: block;
-  background-color: #141d2f;
+  background-color: var(----dark-blue);
   position: relative;
   width: 100vw;
   margin-top: -1px;
@@ -74,19 +74,6 @@
   font-size: 16px;
 }
 
-textarea::-webkit-scrollbar {
-  width: 3px;
-}
-
-textarea::-webkit-scrollbar-track {
-  border-radius: 10px;
-}
-
-textarea::-webkit-scrollbar-thumb {
-  background: var(--green);
-  border-radius: 10px;
-}
-
 .scroll-up-img {
   width: 39px;
   height: 39px;
@@ -97,7 +84,7 @@ textarea::-webkit-scrollbar-thumb {
 
   &:hover {
     cursor: pointer;
-  background-image: url('../../../assets/img/objects/scroll-up-green.png');
+    background-image: url('../../../assets/img/objects/scroll-up-green.png');
 
   }
 }
@@ -117,10 +104,6 @@ textarea::-webkit-scrollbar-thumb {
   .info-box {
     width: 50%;
     margin-right: 50px;
-  }
-
-  form {
-    width: 50%;
   }
 }
 
