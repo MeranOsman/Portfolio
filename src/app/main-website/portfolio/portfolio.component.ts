@@ -29,7 +29,7 @@ export class PortfolioComponent {
       img: 'portfolio.png',
       tec: 'Angular | TypeScript | HTML | SCSS',
       description: 'This portfolio presents projects and skills in a user-friendly manner. Explore them effortlessly.',
-      githubLink: '#',
+      githubLink: 'https://github.com/MeranOsman/portfolio',
       projectLink: '#introduction'
     }
   ];
