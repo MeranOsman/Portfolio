@@ -80,11 +80,11 @@
   position: absolute;
   right: 0;
   bottom: 95px;
-  background-image: url('../../../assets/img/objects/scroll-up.png');
+  background-image: url('../../../assets/img/objects/scroll-up.svg');
 
   &:hover {
     cursor: pointer;
-    background-image: url('../../../assets/img/objects/scroll-up-green.png');
+    background-image: url('../../../assets/img/objects/scroll-up-green.svg');
 
   }
 }

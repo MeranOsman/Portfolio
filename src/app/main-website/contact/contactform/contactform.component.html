@@ -1,26 +1,53 @@
 <div class="container">
     <form (ngSubmit)="onSubmit(contactForm)" #contactForm="ngForm">
 
-        <input #name="ngModel" [(ngModel)]="contactData.name" required type="text" id="name" name="name" placeholder="Your name">
-        <span class="required-span" *ngIf="!name.valid && name.touched">Your name is required</span>
+        <div class="required-field">
+            <input
+                [ngClass]="{ 'error': (name.errors?.['minlength'] || name.errors?.['required']) && name.touched, 'done': !(name.errors?.['minlength'] || name.errors?.['required']) && name.touched }"
+                #name="ngModel" [(ngModel)]="contactData.name" required minlength="3" type="text" id="name" name="name"
+                placeholder="Your name">
+            <span class="required-span"
+                *ngIf="name.errors?.['required'] && name.touched && !name.errors?.['minlength']">Your name is
+                required</span>
+            <span class="required-span" *ngIf="name.errors?.['minlength'] && name.touched">Please write at least 3
+                letters</span>
+        </div>
 
+        <div class="required-field">
+            <input [ngClass]="{ 
+                'error': (email.errors?.['required'] && email.touched && !email.errors?.['pattern']) || (email.errors?.['pattern'] && email.touched),
+                'done': email.touched && !email.errors
+              }" #email="ngModel" [(ngModel)]="contactData.email" required type="email"
+                pattern="[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}" id="email" name="email"
+                placeholder="Your email">
+            <span class="required-span"
+                *ngIf="email.errors?.['required'] && email.touched && !email.errors?.['pattern']">Your email is
+                required</span>
+            <span class="required-span" *ngIf="email.errors?.['pattern'] && email.touched">Please enter a valid email
+                address</span>
+        </div>
 
-        <input #email="ngModel" [(ngModel)]="contactData.email" required type="email"
-            pattern="[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}" id="email" name="email" placeholder="Your email">
-            <span class="required-span" *ngIf="!email.valid && email.touched">Your email is required</span>
-
-        <textarea #message="ngModel" [(ngModel)]="contactData.message" required id="message" name="message"
-            placeholder="Your message" minlength="4" style="height:200px"></textarea>
-        <span class="required-span" *ngIf="!message.valid && message.touched">Your message is empty</span>
+        <div class="required-field-textarea">
+            <textarea
+                [ngClass]="{ 'error': (message.errors?.['minlength'] || message.errors?.['required']) && message.touched, 'done': !(message.errors?.['minlength'] || message.errors?.['required']) && message.touched }"
+                #message="ngModel" [(ngModel)]="contactData.message" required id="message" name="message"
+                placeholder="Your message" minlength="4" style="height:200px"></textarea>
+            <span class="required-span"
+                *ngIf="message.errors?.['required'] && message.touched && !message.errors?.['minlength']">Your message
+                is empty</span>
+            <span class="required-span" *ngIf="message.errors?.['minlength'] && message.touched">Please write at least 3
+                letters</span>
+        </div>
 
         <div class="check-privacy-policy">
-            <input type="checkbox">
-            <span>I've read the <a (click)="scrollUp()" routerLink="/privacy-policy">privacy policy</a> and agree to the
+            <input #checkbox="ngModel" [(ngModel)]="contactData.checkbox" type="checkbox" required name="checkbox">
+            <span>I've read the <a (click)="scrollUp()" routerLink="/privacy-policy">privacy policy</a> and agree to
+                the
                 processing of my data as outlined.</span>
         </div>
 
         <div class="center">
-            <input type="submit" value="Send message">
+            <input [disabled]="!contactForm.valid" type="submit" value="Send message">
         </div>
 
     </form>

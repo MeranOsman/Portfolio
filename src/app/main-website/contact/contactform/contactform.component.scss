@@ -12,11 +12,11 @@ textarea {
     border: 1px solid var(--purple);
     border-radius: 10px;
     box-sizing: border-box;
-    margin-bottom: 32px;
     resize: vertical;
     color: white;
     font-size: 16px;
     font-weight: 300;
+    margin-bottom: 6px;
 
     &:hover {
         border: 1px solid var(--green);
@@ -33,12 +33,21 @@ textarea {
     }
 }
 
+input:-webkit-autofill,
+input:-webkit-autofill:focus {
+    transition: background-color 600000s 0s, color 600000s 0s;
+}
+
+input[data-autocompleted] {
+    background-color: transparent !important;
+}
+
 textarea {
-    margin-bottom: 8px !important;
+    margin-bottom: 0px;
 }
 
 textarea::-webkit-resizer {
-    background-image: url('../../../../assets/img/objects/Group.png');
+    background-image: url('../../../../assets/img/objects/Group.svg');
     background-position: center;
     background-repeat: no-repeat;
 }
@@ -50,7 +59,7 @@ textarea::-webkit-resizer {
 }
 
 input[type=submit] {
-    background-color: #B6B6B6;
+    background-color: var(--green);
     color: white;
     font-size: 24px;
     font-weight: 300;
@@ -60,8 +69,17 @@ input[type=submit] {
     cursor: pointer;
 }
 
+input[type="submit"]:disabled {
+    opacity: 0.5;
+
+    &:hover {
+        background-color: var(--green);
+        cursor: default;
+    }
+}
+
 input[type=submit]:hover {
-    background-color: #45a049;
+    background-color: var(--purple);
 }
 
 textarea::-webkit-scrollbar {
@@ -88,20 +106,20 @@ input[type="checkbox"] {
     appearance: none;
     width: 24px;
     height: 24px;
-    background-image: url('.././../../../assets/img/objects/default.png');
+    background-image: url('.././../../../assets/img/objects/default.svg');
     background-position: center;
     background-repeat: no-repeat;
     cursor: pointer;
 
     &:hover {
-        background-image: url('.././../../../assets/img/objects/default-hover.png');
+        background-image: url('.././../../../assets/img/objects/default-hover.svg');
     }
 
     &:checked {
-        background-image: url('.././../../../assets/img/objects/checked.png');
+        background-image: url('.././../../../assets/img/objects/checked.svg');
 
         &:hover {
-        background-image: url('.././../../../assets/img/objects/checked-hover.png');
+            background-image: url('.././../../../assets/img/objects/checked-hover.svg');
         }
     }
 }
@@ -122,4 +140,36 @@ input[type="checkbox"] {
             text-decoration: underline;
         }
     }
+}
+
+.required-field {
+    margin-bottom: 32px;
+}
+
+
+
+.required-field-textarea {
+    margin-bottom: 10px;
+}
+
+.required-span {
+    color: var(--red);
+    font-size: 14px;
+    font-weight: 300;
+}
+
+.error {
+    border: 1px solid var(--red) !important;
+    background-image: url('../../../../assets/img/objects/error.svg');
+    background-repeat: no-repeat;
+    background-position-x: right;
+    background-origin: content-box;
+}
+
+.done {
+    border: 1px solid var(--green) !important;
+    background-image: url('../../../../assets/img/objects/done.svg');
+    background-repeat: no-repeat;
+    background-position-x: right;
+    background-origin: content-box;
 }

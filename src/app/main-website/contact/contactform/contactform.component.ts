@@ -13,7 +13,8 @@ export class ContactformComponent {
   contactData = {
     name: '',
     email: '',
-    message: ''
+    message: '',
+    checkbox: false
   }
   post = {
     endPoint: 'https://deineDomain.de/sendMail.php',
