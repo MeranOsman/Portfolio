@@ -29,7 +29,7 @@
 
         <div class="required-field-textarea">
             <textarea
-                [ngClass]="{ 'error': (message.errors?.['minlength'] || message.errors?.['required']) && message.touched, 'done': !(message.errors?.['minlength'] || message.errors?.['required']) && message.touched }"
+                [ngClass]="{ 'error-textarea': (message.errors?.['minlength'] || message.errors?.['required']) && message.touched, 'done-textarea': !(message.errors?.['minlength'] || message.errors?.['required']) && message.touched }"
                 #message="ngModel" [(ngModel)]="contactData.message" required id="message" name="message"
                 placeholder="Your message" minlength="4" style="height:200px"></textarea>
             <span class="required-span"

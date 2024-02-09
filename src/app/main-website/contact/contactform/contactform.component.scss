@@ -8,7 +8,7 @@ input[type=email],
 textarea {
     width: 100%;
     background-color: var(--dark-blue);
-    padding: 12px 12px 12px 24px;
+    padding: 12px 50px 12px 24px;
     border: 1px solid var(--purple);
     border-radius: 10px;
     box-sizing: border-box;
@@ -30,6 +30,7 @@ textarea {
     &::placeholder {
         color: white;
         font-weight: 300;
+        padding-right: 24px;
     }
 }
 
@@ -163,7 +164,8 @@ input[type="checkbox"] {
     background-image: url('../../../../assets/img/objects/error.svg');
     background-repeat: no-repeat;
     background-position-x: right;
-    background-origin: content-box;
+    background-origin: border-box;
+    background-position: calc(100% - 16px) center;
 }
 
 .done {
@@ -171,5 +173,26 @@ input[type="checkbox"] {
     background-image: url('../../../../assets/img/objects/done.svg');
     background-repeat: no-repeat;
     background-position-x: right;
-    background-origin: content-box;
+    background-origin: border-box;
+    background-position: calc(100% - 16px) center;
+}
+
+.error-textarea {
+    border: 1px solid var(--red) !important;
+    background-image: url('../../../../assets/img/objects/error.svg');
+    background-repeat: no-repeat;
+    background-position-x: right;
+    background-position: calc(100% - 16px) 12px;
+    background-position-x: calc(100% - 16px);
+    background-position-y: 12px;
+}
+
+.done-textarea {
+    border: 1px solid var(--green) !important;
+    background-image: url('../../../../assets/img/objects/done.svg');
+    background-repeat: no-repeat;
+    background-position-x: right;
+    background-origin: border-box;
+    background-position-x: calc(100% - 16px);
+    background-position-y: 12px;
 }
