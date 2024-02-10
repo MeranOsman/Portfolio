@@ -372,6 +372,7 @@
 @media(max-width:930px) {
   :host {
     position: relative;
+    padding-bottom: 110px;
   }
 
   .introduction-container {
@@ -385,7 +386,7 @@
 
   .name-container {
     z-index: 99;
-    margin-top: 20px;
+    margin-top: 25px;
   }
 
   .introduction-img {
@@ -405,20 +406,6 @@
     font-size: 35px;
   }
 
-  .scroll-down-div {
-    font-size: 13px;
-    bottom: 160px;
-    right: -20px;
-
-    span {
-      margin-bottom: 1px;
-    }
-
-    img {
-      height: 12px;
-    }
-  }
-
   .purple-line {
     width: 70px;
   }
@@ -428,7 +415,8 @@
   }
 
   .scroll-down {
-    display: none;
+    top: -130px;
+    right: -3.5vw;
   }
 
   .btn-talk-a {
@@ -478,6 +466,15 @@
   .intro-background-form {
     left: -50px;
   }
+
+  .scroll-down {
+    top: -80px;
+    right: -4.5vw;
+
+    span {
+      font-size: 20px;
+    }
+  }
 }
 
 
@@ -511,12 +508,26 @@
 
 
 @media(max-width: 550px) {
+  :host {
+    padding-bottom: 100px;
+  }
+
   .background-form {
     top: 110px;
   }
 
   .intro-background-form {
     left: -120px;
+  }
+
+  .scroll-down {
+    display: none;
+  }
+
+  .btn-talk {
+    width: 140px;
+    height: 50px;
+    font-size: 18px;
   }
 }
 
@@ -542,12 +553,6 @@
     margin-top: 25px;
   }
 
-  .btn-talk {
-    width: 155px;
-    height: 53px;
-    font-size: 20px;
-  }
-
   .background-form {
     top: 62px;
     width: 206%;
@@ -564,6 +569,10 @@
   .section-between {
     margin-top: 40px;
   }
+
+  :host {
+    padding-bottom: 90px;
+  }
 }
 
 
@@ -577,10 +586,6 @@
   .intro-background-form {
     left: -190px;
     top: 80px;
-  }
-
-  .intro-name {
-    font-size: 32px;
   }
 
   .intro-dev {
@@ -604,11 +609,5 @@
 @media(max-width:360px) {
   .name-container {
     width: 340px;
-  }
-
-  .btn-talk {
-    width: 145px;
-    height: 50px;
-    font-size: 20px;
   }
 }
