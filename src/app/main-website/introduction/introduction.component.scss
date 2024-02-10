@@ -1,41 +1,48 @@
 :host {
-  padding-bottom: 120px;
+  width: 100vw;
+  padding-bottom: 130px;
   display: block;
   background-color: var(--dark-blue);
 }
 
-[data-aos] {
-  transition-duration: 1.5s !important;
-}
-
 .introduction-container {
+  width: 75vw;
+  margin: auto;
   background-color: var(--dark-blue);
   display: flex;
   justify-content: space-between;
-  margin-right: 420px;
 }
 
 .intro-background-form {
-  margin-left: -60px;
-  margin-top: 206px;
+  position: absolute;
+  left: 50px;
+  top: 105px;
 }
 
 .introduction-img {
-  height: 914px;
-  width: 822px;
-  object-fit: cover;
-  position: absolute;
-  left: 60px;
-  top: 40px;
-  object-fit: contain;
+  height: 580px;
+  width: auto;
+  margin: 160px 0 0 -10px;
+  z-index: 1;
+}
+
+.name-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  z-index: 2;
+  margin-top: 290px;
+  height: fit-content;
+}
+
+.btn-talk-a {
+  margin: 28px 0 0 -200px;
 }
 
 .intro-box {
   display: flex;
   align-items: center;
   height: fit-content;
-  z-index: 2;
-  margin-top: 302px;
 }
 
 .text-I-am {
@@ -43,7 +50,6 @@
   font-size: 71px;
   transform: rotate(270deg);
   color: white;
-  margin-top: 14px;
   margin-right: -10px;
   margin-left: -170px;
 }
@@ -65,12 +71,6 @@
   font-size: 58px;
   margin-top: -18px;
   color: var(--purple);
-}
-
-.btn-talk-a {
-  position: absolute;
-  top: 228px;
-  left: 183px;
 }
 
 .btn-talk {
@@ -96,18 +96,19 @@
 .background-form {
   position: absolute;
   top: 422px;
-  left: -5px;
+  left: 0px;
   width: 100%;
   height: 970px;
+  z-index: 9;
 }
 
 .contact-icons {
   display: flex;
   align-items: center;
   justify-content: space-between;
+  gap: 40px;
   position: relative;
   z-index: 2;
-  width: 620px;
 
   img {
     width: 30px;
@@ -136,8 +137,8 @@
 .section-between {
   display: flex;
   position: relative;
-  padding-right: 120px;
-  margin-top: -85px;
+  margin-top: 100px;
+  z-index: 9;
 
   a {
     height: 30px;
@@ -146,7 +147,7 @@
 
 .scroll-down {
   position: absolute;
-  right: 6.5vw;
+  right: 7.6vw;
   bottom: 120px;
   color: white;
   z-index: 3;
@@ -187,25 +188,7 @@
 }
 
 
-@media(max-width: 2350px) {
-  .introduction-container {
-    margin-right: 220px;
-  }
-}
-
-
-@media(max-width: 2100px) {
-  .introduction-container {
-    margin-right: 120px;
-  }
-}
-
-
 @media(max-width: 1980px) {
-  .introduction-container {
-    justify-content: unset;
-  }
-
   .intro-name {
     font-size: 74px;
   }
@@ -216,51 +199,21 @@
 
   .text-I-am {
     font-size: 57px;
-    margin-top: 6px;
-  }
-
-  .introduction-img {
-    height: 600px;
-    width: auto;
-    top: 170px;
-  }
-
-  .intro-background-form {
-    margin-left: -80px;
-    margin-top: 150px;
   }
 
   .background-form {
-    top: 380px;
+    top: 350px;
   }
 
   .intro-dev {
     font-size: 58px;
   }
-
-  .btn-talk-a {
-    position: absolute;
-    top: 220px;
-    left: 136px;
-  }
-
-  .intro-box {
-    margin-top: 300px;
-    margin-left: 150px;
-  }
 }
 
 
-@media(max-width: 1700px) {
-  .intro-box {
-    margin-left: 100px;
-  }
-}
-
-
-@media(max-width:1485px) {
-  .intro-box {
-    margin-top: 280px;
+@media(max-width: 1600px) {
+  .name-container {
+    margin-top: 310px;
   }
 
   .intro-name {
@@ -274,13 +227,20 @@
 
   .text-I-am {
     font-size: 43px;
-    margin-top: 6px;
     margin-left: -143px;
   }
 
-  .btn-talk-a {
-    top: 143px;
-    left: 88px;
+  .background-form {
+    top: 330px;
+  }
+
+  .introduction-img {
+    height: 530px;
+    margin-top: 190px;
+  }
+
+  .intro-background-form {
+    left: 10px;
   }
 }
 
@@ -297,22 +257,27 @@
   .text-I-am {
     font-size: 40px;
   }
-}
 
-
-@media(max-width:1300px) {
   .introduction-img {
-    height: 655px;
-    width: 596px;
-    top: 89px;
+    height: 480px;
+    margin-top: 140px;
   }
 
   .intro-background-form {
-    margin-left: -109px;
+    left: -55px;
+    top: 165px;
   }
 
-  .intro-box {
-    margin-top: 261px;
+  .background-form {
+    top: 230px;
+  }
+
+  .name-container {
+    margin-top: 225px;
+  }
+
+  .scroll-down {
+    right: 7vw;
   }
 }
 
@@ -328,35 +293,14 @@
 
   .text-I-am {
     font-size: 37px;
-    margin-top: 4px;
-  }
-
-  .btn-talk-a {
-    top: 132px;
-  }
-}
-
-
-@media(max-width:1220px) {
-  .introduction-img {
-    left: 1px;
-  }
-
-  .intro-background-form {
-    margin-left: -111px;
   }
 }
 
 
 @media(max-width:1185px) {
-  .introduction-container {
-    justify-content: end;
-  }
-
   .text-I-am {
     margin-left: -99px;
     font-size: 36px;
-    margin-top: 4px;
   }
 
   .intro-dev {
@@ -364,63 +308,28 @@
   }
 
   .btn-talk-a {
-    top: 125px;
-    left: 81px;
+    margin-left: -130px;
   }
 
-  .introduction-img {
-    width: 487px;
-    left: 22px;
-    top: 82px;
-  }
-
-  .background-form {
-    top: 255px;
-  }
-
-  .intro-background-form {
-    margin-left: -155px;
-    margin-top: 182px;
-    position: absolute;
-    left: 0;
+  .scroll-down {
+    right: 5.5vw;
   }
 }
 
 
 @media(max-width:1090px) {
+  #vector1 {
+    display: none;
+  }
+
+  #vector2 {
+    display: block !important;
+  }
+
   .background-form {
-    top: 205px;
+    top: 360px;
   }
 
-  .introduction-img {
-    width: 456px;
-    top: 49px;
-    left: 38px;
-  }
-
-  .intro-name {
-    font-size: 38px;
-  }
-
-  .intro-dev {
-    font-size: 31px;
-  }
-
-  .text-I-am {
-    font-size: 34px;
-  }
-
-  .btn-talk-a {
-    top: 116px;
-  }
-
-  .intro-box {
-    margin-top: 228px;
-  }
-}
-
-
-@media(max-width:1030px) {
   .intro-name {
     font-size: 36px;
   }
@@ -431,24 +340,29 @@
 
   .text-I-am {
     font-size: 32px;
-    margin-top: 2px;
+  }
+
+  .name-container {
+    margin-top: 260px;
+  }
+
+  .introduction-img {
+    height: 400px;
+    margin-top: 160px;
+  }
+
+  .intro-background-form {
+    left: -90px;
+    top: 165px;
+  }
+
+  .scroll-down {
+    top: -10px;
   }
 }
 
 
 @media(max-width:1010px) {
-  .introduction-container {
-    margin-right: 90px;
-  }
-
-  .introduction-img {
-    left: 18px;
-  }
-
-  .intro-background-form {
-    margin-left: -171px;
-  }
-
   .scroll-down-div {
     right: 36px;
   }
@@ -457,43 +371,25 @@
 
 @media(max-width:930px) {
   :host {
-    width: 100%;
     position: relative;
-    overflow-x: hidden;
-    display: unset;
   }
 
   .introduction-container {
     flex-direction: column;
     align-items: center;
-    padding-left: 90px;
-    padding-right: 90px;
-    margin-right: 0;
-  }
-
-  .introduction-img {
-    position: unset;
-    margin-top: -575px;
-    width: 382px;
-    margin-left: 10px;
-  }
-
-  .intro-background-form {
-    margin-left: -30px;
-    margin-top: 105px;
-    position: unset;
   }
 
   .background-form {
-    top: 150px;
-    height: 850px;
-    width: 155%;
-    transform: rotate(-4deg);
-    margin-left: -50px;
+    top: 315px;
   }
 
-  .intro-box {
-    margin-top: -125px;
+  .name-container {
+    z-index: 99;
+    margin-top: 20px;
+  }
+
+  .introduction-img {
+    margin-top: 115px;
   }
 
   .intro-name {
@@ -506,13 +402,7 @@
 
   .text-I-am {
     margin-left: 0;
-    margin-top: 4px;
     font-size: 35px;
-  }
-
-  .btn-talk-a {
-    top: 113px;
-    left: 111px;
   }
 
   .scroll-down-div {
@@ -529,7 +419,7 @@
     }
   }
 
-  .blue-line {
+  .purple-line {
     width: 70px;
   }
 
@@ -537,32 +427,36 @@
     font-size: 18px;
   }
 
-  .contact-icons {
-    width: 655px;
-  }
-
-  .scroll-down-div {
+  .scroll-down {
     display: none;
   }
-}
 
+  .btn-talk-a {
+    margin-left: 0px;
+  }
 
-@media(max-width:840px) {
-  .background-form {
-    top: 164px;
-    transform: rotate(-2deg);
+  .intro-background-form {
+    left: 20px;
+    top: 90px;
+  }
+
+  .section-between {
+    margin-top: 45px;
+  }
+
+  .name-dev {
+    margin-right: 15px;
   }
 }
 
 
-@media(max-width:750px) {
+@media(max-width: 800px) {
+  .intro-background-form {
+    left: 0px;
+  }
+
   .introduction-container {
-    padding-left: 35px;
-    padding-right: 60px;
-  }
-
-  .background-form {
-    top: 160px;
+    width: 90vw;
   }
 }
 
@@ -572,35 +466,32 @@
     display: none;
   }
 
-  .contact-icons {
-    width: 280px;
+  .introduction-img {
+    height: 370px;
+    margin-top: 130px;
+  }
+
+  .background-form {
+    top: 290px;
+  }
+
+  .intro-background-form {
+    left: -50px;
   }
 }
 
 
 @media(max-width:630px) {
-  .introduction-container {
-    padding-left: 30px;
-    padding-right: 30px;
+  #vector1 {
+    display: block !important;
   }
 
-  .introduction-img {
-    width: 353px;
-    height: 600px;
-    margin-top: -563px;
-  }
-
-  .intro-box {
-    width: 410px;
-    margin-top: -88px;
-    margin-left: -15px;
-    margin-top: -118px;
+  #vector2 {
+    display: none !important;
   }
 
   .text-I-am {
-    margin-top: -40px;
-    font-size: 36px;
-    margin-right: -14px;
+    font-size: 31px;
   }
 
   .intro-name {
@@ -612,14 +503,8 @@
     font-size: 31px;
   }
 
-  .btn-talk-a {
-    top: 145px;
-    left: 71px;
-  }
-
   .background-form {
-    top: 109px;
-    transform: rotate(-3deg);
+    top: 110px;
     width: 183%;
   }
 }
@@ -627,13 +512,20 @@
 
 @media(max-width: 550px) {
   .background-form {
-    top: 114px;
-    transform: rotate(-1deg);
+    top: 110px;
+  }
+
+  .intro-background-form {
+    left: -120px;
   }
 }
 
 
 @media(max-width:450px) {
+  .introduction-img {
+    height: 320px;
+  }
+
   .intro-name {
     font-size: 35px;
   }
@@ -643,18 +535,11 @@
   }
 
   .text-I-am {
-    margin-top: -35px;
-    font-size: 32px;
+    font-size: 27px;
   }
 
-  .intro-box {
-    margin-left: 36px;
-    margin-top: -112px;
-  }
-
-  .btn-talk-a {
-    left: 53px;
-    top: 133px;
+  .name-container {
+    margin-top: 25px;
   }
 
   .btn-talk {
@@ -664,60 +549,61 @@
   }
 
   .background-form {
-    top: 107px;
-    transform: rotate(-2deg);
+    top: 62px;
     width: 206%;
+  }
+
+  .intro-background-form {
+    left: -170px;
+  }
+
+  .section-between {
+    margin-top: 65px;
+  }
+
+  .section-between {
+    margin-top: 40px;
   }
 }
 
 
 @media(max-width:400px) {
+  .introduction-img {
+    height: 290px;
+    margin-top: 110px;
+    margin-left: 16px;
+  }
+
+  .intro-background-form {
+    left: -190px;
+    top: 80px;
+  }
+
   .intro-name {
     font-size: 32px;
   }
 
   .intro-dev {
-    font-size: 25px;
+    font-size: 24.5px;
   }
 
   .text-I-am {
-    margin-top: -33px;
-    font-size: 29px;
-  }
-
-  .intro-box {
-    margin-left: 71px;
-    margin-top: -112px;
-  }
-
-  .btn-talk-a {
-    left: 41px;
-    top: 129px;
+    font-size: 24.5px;
   }
 
   .blue-line {
     width: 45px;
   }
+
+  .background-form {
+    top: 10px;
+  }
 }
 
 
 @media(max-width:360px) {
-  .intro-box {
+  .name-container {
     width: 340px;
-    margin-left: 13px;
-  }
-
-  .intro-name {
-    font-size: 30px;
-  }
-
-  .text-I-am {
-    font-size: 28px;
-  }
-
-  .btn-talk-a {
-    left: 44px;
-    top: 116px;
   }
 
   .btn-talk {

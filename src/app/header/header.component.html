@@ -1,6 +1,7 @@
 <header class="header">
   <nav>
     <a class="name" href="#introduction">M<span class="purple">e</span>ra<span class="green">n</span></a>
+
     <div class="links">
       <a href="#scroll-to-about-me"><span class=>About me</span></a>
       <a href="#scroll-to-my-skills"><span class=>Skills</span></a>
@@ -11,5 +12,24 @@
         <a href="#">EN</a>
       </div>
     </div>
+
+
+    <input (click)="showMobileMenu()" type="checkbox" id="menu_checkbox">
+    <label class="mobile-nav-bar" for="menu_checkbox">
+      <div [class.div1-change]="mobileMenu"></div>
+      <div [class.div2-change]="mobileMenu"></div>
+      <div [class.div3-change]="mobileMenu"></div>
+    </label>
   </nav>
+  <div *ngIf="mobileMenu" class="mobile-menu">
+    <a href="#scroll-to-about-me" (click)="closeMobileMenu()"><span class="header-link-mobile">About me</span></a>
+    <a href="#scroll-to-my-skills" (click)="closeMobileMenu()"><span class="header-link-mobile">Skills</span></a>
+    <a href="#scroll-to-portfolio" (click)="closeMobileMenu()"><span class="header-link-mobile">Portfolio</span></a>
+    <a href="#scroll-to-contact" (click)="closeMobileMenu()"><span class="header-link-mobile">Contact</span></a>
+    <div class="language">
+      <a href="#" (click)="closeMobileMenu()">DE</a>
+      <span>|</span>
+      <a href="#" (click)="closeMobileMenu()">EN</a>
+    </div>
+  </div>
 </header>
