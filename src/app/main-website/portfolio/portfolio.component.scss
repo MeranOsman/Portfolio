@@ -32,7 +32,7 @@ section {
 }
 
 .headline {
-  margin: 0 0 0 40px;
+  margin: 0;
   color: white;
 }
 
@@ -41,7 +41,7 @@ section {
   font-size: 16px;
   color: white;
   text-align: center;
-  margin-top: 35px;
+  margin-top: 30px;
   margin-bottom: 120px;
 }
 
@@ -49,15 +49,16 @@ section {
   border: 2px solid var(--purple);
   width: 7.5%;
   height: 0;
-  margin-left: -160px;
-  margin-top: 5px;
   border-top-left-radius: 3px;
   border-bottom-left-radius: 3px;
+  position: absolute;
+  top: 68px;
+  left: 27%;
 }
 
 .long-purple-line {
   border: 2px solid var(--purple);
-  width: 35.4%;
+  width: 34.1%;
   height: 0;
   position: absolute;
   top: 68px;
@@ -66,65 +67,100 @@ section {
 
 .form {
   position: absolute;
-  bottom: 0px;
-  left: 0;
-  width: 750px;
+  top: 530px;
+  left: 45%;
+  width: 670px;
+  opacity: 0.6;
 }
 
 .form-2 {
   position: absolute;
-  bottom: -110px;
+  bottom: -240px;
   right: 0;
   z-index: 1;
 }
+
+
+@media(max-width: 1400px) {
+  .long-purple-line {
+    width: 32%;
+  }
+
+  .short-purple-line {
+    left: 25%;
+  }
+}
+
 
 @media(max-width: 1250px) {
   .long-purple-line {
     top: 54px;
   }
-}
 
+  .short-purple-line {
+    top: 54px;
+  }
 
-@media(max-width: 1100px) {
-  .long-purple-line {
-    width: 29%;
+  .form-2 {
+    width: 320px;
+  }
+
+  :host {
+    padding-bottom: 0;
   }
 }
 
 
-@media(max-width: 900px) {
+@media(max-width: 1000px) {
   .long-purple-line {
-    width: 26%;
+    width: 30%;
+  }
+
+  .short-purple-line {
+    left: 23%;
+  }
+}
+
+
+@media (max-width: 930px) {
+  section {
+    width: 90vw;
   }
 
   .form {
-    top: 786px;
-    width: 547px;
+    top: 722px;
+    left: 29%;
+    width: 500px;
+  }
+
+  .form-2 {
+    width: 300px;
+  }
+
+  :host {
+    margin-bottom: -20px;
   }
 }
 
 
-@media(max-width: 750px) {
+@media(max-width: 850px) {
+  .long-purple-line {
+    width: 27%;
+  }
+
+  .short-purple-line {
+    left: 19.8%;
+  }
+}
+
+
+@media(max-width: 730px) {
   .long-purple-line {
     width: 23%;
   }
-}
 
-
-@media(max-width: 700px) {
-  .info-text {
-    padding: 0 60px;
-  }
-
-  .headline {
-    margin-left: 45px;
-  }
-}
-
-
-@media(max-width: 630px) {
-  .info-text {
-    padding: 0 30px;
+  .short-purple-line {
+    left: 15.8%;
   }
 }
 
@@ -134,15 +170,30 @@ section {
     top: 46px;
   }
 
+  .short-purple-line {
+    top: 46px;
+  }
+
+  .info-text {
+    margin-top: 22px;
+  }
+
+  .form {
+    top: 739px;
+    left: 13%;
+    width: 450px;
+  }
+
   .form-2 {
-    width: 80%;
+    bottom: -190px;
+    width: 250px;
   }
 }
 
 
 @media(max-width: 550px) {
-  :host {
-    padding-bottom: 80px;
+  .info-text {
+    margin-bottom: 90px;
   }
 
   .long-purple-line {
@@ -150,75 +201,78 @@ section {
   }
 
   .short-purple-line {
-    margin-left: -111px;
-  }
-
-  .info-text {
-    margin-bottom: 90px;
+    left: 11.8%;
   }
 }
 
 
 @media(max-width: 500px) {
   .long-purple-line {
-    display: none;
+    top: 41px;
   }
 
   .short-purple-line {
-    margin-left: 0;
-    width: 24%;
+    top: 41px;
   }
 
-  .headline-container {
-    justify-content: start;
+  .form {
+    top: 683px;
+    left: 13%;
+    width: 400px;
+  }
+
+  :host {
+    margin-bottom: -40px;
   }
 
   .form-2 {
-    width: 68%;
+    bottom: -135px;
+    width: 210px;
   }
 }
 
 
 @media(max-width: 430px) {
-  .short-purple-line {
-    width: 18%;
-  }
-
-  .headline {
-    margin-left: 35px;
-  }
-
   .info-text {
     font-size: 15px;
   }
-}
 
-
-@media(max-width:400px) {
-  .short-purple-line {
+  .long-purple-line {
     width: 15%;
   }
 
+  .short-purple-line {
+    left: 7.8%;
+  }
+
   .form {
-    top: 754px;
-    width: 415px;
+    top: 670px;
+    left: 4%;
+    width: 400px;
+  }
+
+  .form-2 {
+    bottom: -70px;
+    width: 150px;
+    right: -10px;
   }
 }
 
 
-@media(max-width:360px) {
-  .info-text {
-    padding: 0 15px;
+@media(max-width: 360px) {
+  .long-purple-line {
+    top: 34px;
   }
 
-  .headline {
-        margin-left: 20px;
+  .short-purple-line {
+    top: 34px;
   }
-}
 
-
-@media(min-width: 1500px) {
   .info-text {
-    margin-bottom: 170px;
+    margin-top: 18px;
+  }
+
+  :host {
+    margin-bottom: -50px;
   }
 }

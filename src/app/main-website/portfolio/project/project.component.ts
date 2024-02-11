@@ -6,7 +6,6 @@ import * as AOS from 'aos';
   templateUrl: './project.component.html',
   styleUrls: ['./project.component.scss'],
 })
-
 export class ProjectComponent implements OnInit {
   @Input() project: any;
   @Input() isOdd: any;

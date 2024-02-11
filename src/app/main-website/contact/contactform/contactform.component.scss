@@ -1,3 +1,7 @@
+:host {
+    width: 50%;
+}
+
 .container {
     background-color: var(--dark-blue);
     color: white;
@@ -105,8 +109,8 @@ input[type="checkbox"] {
     -webkit-appearance: none;
     -moz-appearance: none;
     appearance: none;
-    width: 24px;
-    height: 24px;
+    min-width: 24px;
+    min-height: 24px;
     background-image: url('.././../../../assets/img/objects/default.svg');
     background-position: center;
     background-repeat: no-repeat;
@@ -131,7 +135,7 @@ input[type="checkbox"] {
     gap: 6px;
     font-size: 14px;
     font-weight: 300;
-    margin-bottom: 32px;
+    margin-bottom: 36px;
 
     a {
         text-decoration: none;
@@ -150,7 +154,7 @@ input[type="checkbox"] {
 
 
 .required-field-textarea {
-    margin-bottom: 10px;
+    margin-bottom: 12px;
 }
 
 .required-span {
@@ -195,4 +199,40 @@ input[type="checkbox"] {
     background-origin: border-box;
     background-position-x: calc(100% - 16px);
     background-position-y: 12px;
+}
+
+
+@media (max-width: 930px) {
+    :host {
+        width: auto;
+    }
+}
+
+
+@media (max-width: 500px) {
+    textarea {
+        height: 180px;
+    }
+
+    input[type=text],
+    input[type=email] {
+        height: 45px;
+        font-size: 15px;
+    }
+
+    textarea {
+        font-size: 15px;
+    }
+
+    .required-field {
+        margin-bottom: 26px;
+    }
+
+    input[type=submit] {
+        font-size: 18px;
+    }
+
+    .required-span {
+        font-size: 13px;
+    }
 }

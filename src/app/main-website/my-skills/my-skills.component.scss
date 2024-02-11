@@ -3,7 +3,7 @@
   color: white;
   background-color: var(--dark-blue);
   display: flex;
-  padding-bottom: 120px;
+  padding-bottom: 100px;
   position: relative;
   margin-top: -1px;
 }
@@ -220,6 +220,10 @@
   .text-skills {
     text-align: end !important;
   }
+
+  :host {
+    padding-bottom: 140px;
+  }
 }
 
 
@@ -321,6 +325,10 @@
     height: 50px;
     font-size: 18px;
   }
+
+  :host {
+    padding-bottom: 120px;
+  }
 }
 
 
@@ -337,6 +345,10 @@
 @media(max-width: 431px) {
   .btn-a-skills {
     bottom: -510px;
+  }
+
+  :host {
+    padding-bottom: 100px;
   }
 }
 
