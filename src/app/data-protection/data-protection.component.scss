@@ -5,12 +5,14 @@
 }
 
 section {
+    max-width: 1920px;
     width: 75vw;
     margin: auto;
     display: flex;
     flex-direction: column;
     color: white;
     padding: 110px 0 60px 0;
+    word-wrap: break-word;
 
     a {
         color: var(--purple);
@@ -29,4 +31,26 @@ h1 {
 h2 {
     color: white;
     margin: initial;
+}
+
+
+@media (max-width: 930px) {
+    section {
+        width: 90vw;
+    }
+}
+
+
+@media (max-width: 500px) {
+    section {
+        font-size: 15px;
+    }
+
+    h1 {
+        font-size: 36px;
+    }
+
+    h2 {
+        font-size: 24px;
+    }
 }

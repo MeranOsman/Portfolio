@@ -9,9 +9,10 @@
 }
 
 .skills-container {
-  display: flex;
+  max-width: 1920px;
   width: 75vw;
   margin: auto;
+  display: flex;
   position: relative;
 }
 
@@ -93,7 +94,7 @@
   flex-direction: column;
   align-items: flex-end;
   z-index: 9;
-  height: 370px;
+  height: 325px;
 
   span {
     margin-top: 20px;
@@ -105,7 +106,7 @@
 }
 
 .headline-my-skills {
-  margin-bottom: 0;
+  margin: 10px 0 0 0;
 }
 
 .btn-a-skills {
@@ -144,7 +145,7 @@
   width: 9%;
   position: absolute;
   right: 0;
-  top: 128px;
+  top: 78px;
 }
 
 .background-form {
@@ -155,20 +156,39 @@
 }
 
 
+@media (min-width: 1834px) {
+  .background-form {
+    bottom: -565px;
+  }
+
+  .headline-my-skills {
+    margin: -30px 0 0 0;
+  }
+
+  .purple-line {
+    top: 38px;
+  }
+
+  .headline {
+    height: 270px;
+  }
+}
+
+
 @media (max-width: 1350px) {
   .headline-my-skills {
     font-size: 85px;
   }
 
   .purple-line {
-    top: 120px;
+    top: 76px;
   }
 }
 
 
 @media(max-width: 1250px) {
   .purple-line {
-    top: 99px;
+    top: 61px;
   }
 
   .headline-my-skills {
@@ -180,11 +200,15 @@
   }
 
   .headline {
-    height: 350px;
+    height: 310px;
   }
 
   .background-form {
     bottom: -530px;
+  }
+
+  .btn-a-skills {
+    transform: translate(-32%);
   }
 }
 
@@ -205,6 +229,7 @@
   .btn-a-skills {
     bottom: -400px;
     left: calc(50%);
+    transform: translate(-50%);
   }
 
   .skill-box {
@@ -215,6 +240,14 @@
     width: 100%;
     align-items: end;
     height: 285px;
+  }
+
+  .headline-my-skills {
+    margin: 34px 0 0 0;
+  }
+
+  .purple-line {
+    top: 86px;
   }
 
   .text-skills {
@@ -277,7 +310,7 @@
   }
 
   .purple-line {
-    top: 85px;
+    top: 79px;
   }
 }
 
@@ -359,6 +392,6 @@
   }
 
   .purple-line {
-    top: 64px;
+    top: 68px;
   }
 }
