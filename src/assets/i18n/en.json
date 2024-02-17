@@ -29,5 +29,8 @@
     "name required": "Your name is required",
     "message required": "Your message is empty",
     "3 letters": "Please write at least 3 letters",
-    "email valid": "Please enter a valid email address"
+    "4 letters": "Please write at least 4 letters",
+    "email valid": "Please enter a valid email address",
+    "success": "Success! Your message has been sent.",
+    "Get in touch": "Get in touch"
 }

@@ -7,7 +7,10 @@
     <div data-aos="fade-right" data-aos-offset="160" class="info-box">
       <span class="span-headline">{{ 'problem' | translate }}</span>
       <span class="span-contact">{{ 'contact me' | translate }}</span>
-      <span class="span-need">{{ 'need' | translate }}&nbsp;<p class="p-bold">{{ 'Contact me' | translate }}</p></span>
+      <span [ngClass]="{ 'span-need-german': ('need' | translate) === 'Brauchen Sie einen Frontend-Entwickler?' }"
+        class="span-need">{{ 'need' | translate }}&nbsp;<p
+          [ngClass]="{ 'p-bold-german': ('Contact me' | translate) === 'Kontaktieren Sie mich!' }" class="p-bold">{{
+          'Contact me' | translate }}</p></span>
     </div>
 
     <app-contactform data-aos="fade-left" data-aos-offset="160"></app-contactform>

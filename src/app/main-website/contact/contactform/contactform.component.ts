@@ -27,6 +27,7 @@ export class ContactformComponent {
     },
   };
   mailTest = true;
+  showSuccessText = false;
 
 
   onSubmit(ngForm: NgForm) {
@@ -35,6 +36,7 @@ export class ContactformComponent {
         .subscribe({
           next: (response) => {
             ngForm.resetForm();
+            this.showSuccessText = true;
           },
           error: (error) => {
             console.error(error);
@@ -42,8 +44,8 @@ export class ContactformComponent {
           complete: () => console.info('send post complete'),
         });
     } else if (ngForm.submitted && ngForm.form.valid && this.mailTest) {
-
       ngForm.resetForm();
+      this.showSuccessText = true;
     }
   }
 

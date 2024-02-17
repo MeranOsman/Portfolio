@@ -92,6 +92,18 @@
   position: absolute;
   left: 0;
   bottom: -280px;
+  pointer-events: none;
+}
+
+
+@media (max-width: 1720px) {
+  .span-need-german {
+    flex-direction: column;
+  }
+
+  .p-bold-german {
+    margin: 4px 0 0 0;
+  }
 }
 
 
@@ -157,7 +169,11 @@
   }
 
   .shadow {
-    width: 486px;
+    width: 450px;
+  }
+
+  .span-need-german {
+    flex-direction: column;
   }
 }
 
@@ -193,7 +209,7 @@
 
 @media(max-width: 480px) {
   .shadow {
-    width: 448px;
+    width: 430px;
   }
 }
 

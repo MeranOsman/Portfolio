@@ -35,7 +35,7 @@
             <span class="required-span"
                 *ngIf="message.errors?.['required'] && message.touched && !message.errors?.['minlength']">{{ 'message
                 required' | translate }}</span>
-            <span class="required-span" *ngIf="message.errors?.['minlength'] && message.touched">{{ '3 letters' |
+            <span class="required-span" *ngIf="message.errors?.['minlength'] && message.touched">{{ '4 letters' |
                 translate }}</span>
         </div>
 
@@ -45,8 +45,14 @@
                     policy' | translate }}</a>{{ 'agree' | translate }}</span>
         </div>
 
-        <div class="center">
-            <input [disabled]="!contactForm.valid" type="submit" value="{{ 'Send message' | translate }}">
+        <div class="sent">
+            <div class="center">
+                <input [disabled]="!contactForm.valid" type="submit" value="{{ 'Send message' | translate }}">
+            </div>
+            <span *ngIf="showSuccessText" class="success-text">
+                <img src="../../../../assets/img/objects/done.svg">
+                {{ 'success' | translate }}
+            </span>
         </div>
 
     </form>

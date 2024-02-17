@@ -29,5 +29,8 @@
     "name required": "Dein Name ist erforderlich",
     "message required": "Deine Nachricht ist erforderlich",
     "3 letters": "Bitte schreiben Sie mindestens 3 Buchstaben",
-    "email valid": "Bitte geben Sie eine gültige E-Mail-Adresse ein"
+    "4 letters": "Bitte schreiben Sie mindestens 4 Buchstaben",
+    "email valid": "Bitte geben Sie eine gültige E-Mail-Adresse ein",
+    "success": "Erfolgreich! Ihre Nachricht wurde übermittelt.",
+    "Get in touch": "In Kontakt treten"
 }

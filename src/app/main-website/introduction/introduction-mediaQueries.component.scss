@@ -26,7 +26,7 @@
 }
 
 
-@media(max-width: 1600px) {
+@media(max-width: 1650px) {
     .name-container {
         margin-top: 300px;
     }
@@ -145,7 +145,7 @@
 }
 
 
-@media(max-width: 1097px) {
+@media(max-width: 1122px) {
     #vector1 {
         display: none;
     }
@@ -163,11 +163,11 @@
     }
 
     .intro-dev {
-        font-size: 29px;
+        font-size: 27px;
     }
 
     .text-I-am {
-        font-size: 32px;
+        font-size: 30px;
     }
 
     .name-container {
@@ -332,6 +332,10 @@
         top: 110px;
         width: 183%;
     }
+
+    .scroll-down {
+        display: none;
+    }
 }
 
 
@@ -346,10 +350,6 @@
 
     .intro-background-form {
         left: -163px;
-    }
-
-    .scroll-down {
-        display: none;
     }
 
     .btn-talk {
@@ -434,8 +434,12 @@
 }
 
 
-@media(max-width:360px) {
+@media(max-width: 372px) {
     .name-container {
         width: 340px;
+    }
+
+    .intro-dev {
+        font-size: 23px;
     }
 }

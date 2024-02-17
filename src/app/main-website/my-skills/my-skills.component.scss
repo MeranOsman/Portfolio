@@ -109,14 +109,19 @@
   margin: 10px 0 0 0;
 }
 
+.headline-my-skills-german {
+  font-size: 80px;
+  margin-top: 16px;
+}
+
 .btn-a-skills {
   position: absolute;
   bottom: 0;
-  transform: translate(-50%);
+  transform: translate(-70%);
 }
 
 .btn-get-in-touch {
-  width: 195px;
+  width: 210px;
   height: 58px;
   color: white;
   background-color: var(--green);
@@ -153,6 +158,7 @@
   left: 0px;
   bottom: -410px;
   z-index: 2;
+  pointer-events: none;
 }
 
 
@@ -162,15 +168,27 @@
   }
 
   .headline-my-skills {
-    margin: -30px 0 0 0;
+    margin: -18px 0 0 0;
+  }
+
+  .headline-my-skills-german {
+    margin-top: -11px;
   }
 
   .purple-line {
-    top: 38px;
+    top: 52px;
   }
 
   .headline {
-    height: 270px;
+    height: 280px;
+  }
+}
+
+
+@media (max-width: 1600px) {
+  .headline-my-skills-german {
+    font-size: 72px;
+    margin-top: 21px;
   }
 }
 
@@ -178,6 +196,11 @@
 @media (max-width: 1350px) {
   .headline-my-skills {
     font-size: 85px;
+  }
+
+  .headline-my-skills-german {
+    font-size: 64px;
+    margin-top: 27px;
   }
 
   .purple-line {
@@ -195,6 +218,11 @@
     font-size: 70px;
   }
 
+  .headline-my-skills-german {
+    font-size: 56px;
+    margin-top: 18px;
+  }
+
   .skill-box {
     margin-right: 75px;
   }
@@ -208,7 +236,7 @@
   }
 
   .btn-a-skills {
-    transform: translate(-32%);
+    transform: translate(-24%);
   }
 }
 
@@ -243,7 +271,12 @@
   }
 
   .headline-my-skills {
+    font-size: 70px;
     margin: 34px 0 0 0;
+  }
+
+  .headline-my-skills-german {
+    margin-top: 30px;
   }
 
   .purple-line {
@@ -306,7 +339,7 @@
   }
 
   .headline {
-    height: 260px;
+    height: 270px;
   }
 
   .purple-line {
@@ -318,6 +351,11 @@
 @media (max-width: 500px) {
   .headline-my-skills {
     font-size: 55px;
+  }
+
+  .headline-my-skills-german {
+    font-size: 52px;
+    margin-top: 35px;
   }
 
   .skill-box {
@@ -334,7 +372,7 @@
   }
 
   .headline {
-    height: 250px;
+    height: 260px;
   }
 
   .purple-line {
@@ -354,7 +392,7 @@
   }
 
   .btn-get-in-touch {
-    width: 140px;
+    width: 170px;
     height: 50px;
     font-size: 18px;
   }
@@ -389,6 +427,10 @@
 @media(max-width: 360px) {
   .headline-my-skills {
     font-size: 45px;
+  }
+
+  .headline-my-skills-german {
+    margin-top: 33px;
   }
 
   .purple-line {
