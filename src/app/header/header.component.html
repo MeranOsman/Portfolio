@@ -3,13 +3,13 @@
     <a class="name" href="#introduction">M<span class="purple">e</span>ra<span class="green">n</span></a>
 
     <div class="links">
-      <a href="#scroll-to-about-me"><span class=>About me</span></a>
-      <a href="#scroll-to-my-skills"><span class=>Skills</span></a>
-      <a href="#scroll-to-portfolio"><span class=>Portfolio</span></a>
+      <a href="#scroll-to-about-me"><span>{{ 'About me' | translate }}</span></a>
+      <a href="#scroll-to-my-skills"><span>{{'Skills' | translate}}</span></a>
+      <a href="#scroll-to-portfolio"><span>Portfolio</span></a>
       <div class="language">
-        <a href="#">DE</a>
+        <a (click)="changeLanguage('de')">DE</a>
         <span>|</span>
-        <a href="#">EN</a>
+        <a (click)="changeLanguage('en')">EN</a>
       </div>
     </div>
 
@@ -22,14 +22,17 @@
     </label>
   </nav>
   <div *ngIf="mobileMenu" class="mobile-menu">
-    <a href="#scroll-to-about-me" (click)="closeMobileMenu()"><span class="header-link-mobile">About me</span></a>
-    <a href="#scroll-to-my-skills" (click)="closeMobileMenu()"><span class="header-link-mobile">Skills</span></a>
+    <a href="#scroll-to-about-me" (click)="closeMobileMenu()"><span class="header-link-mobile">{{ 'About me' | translate
+        }}</span></a>
+    <a href="#scroll-to-my-skills" (click)="closeMobileMenu()"><span class="header-link-mobile">{{'Skills' |
+        translate}}</span></a>
     <a href="#scroll-to-portfolio" (click)="closeMobileMenu()"><span class="header-link-mobile">Portfolio</span></a>
-    <a href="#scroll-to-contact" (click)="closeMobileMenu()"><span class="header-link-mobile">Contact</span></a>
+    <a href="#scroll-to-contact" (click)="closeMobileMenu()"><span class="header-link-mobile">{{ 'Contact' | translate
+        }}</span></a>
     <div class="language">
-      <a href="#" (click)="closeMobileMenu()">DE</a>
+      <a (click)="changeLanguage('de')">DE</a>
       <span>|</span>
-      <a href="#" (click)="closeMobileMenu()">EN</a>
+      <a (click)="changeLanguage('en')">EN</a>
     </div>
   </div>
 </header>

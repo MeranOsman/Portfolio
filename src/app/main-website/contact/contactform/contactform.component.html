@@ -5,12 +5,12 @@
             <input
                 [ngClass]="{ 'error': (name.errors?.['minlength'] || name.errors?.['required']) && name.touched, 'done': !(name.errors?.['minlength'] || name.errors?.['required']) && name.touched }"
                 #name="ngModel" [(ngModel)]="contactData.name" required minlength="3" type="text" id="name" name="name"
-                placeholder="Your name">
+                placeholder="{{ 'Your name' | translate }}">
             <span class="required-span"
-                *ngIf="name.errors?.['required'] && name.touched && !name.errors?.['minlength']">Your name is
-                required</span>
-            <span class="required-span" *ngIf="name.errors?.['minlength'] && name.touched">Please write at least 3
-                letters</span>
+                *ngIf="name.errors?.['required'] && name.touched && !name.errors?.['minlength']">{{ 'name required' |
+                translate }}</span>
+            <span class="required-span" *ngIf="name.errors?.['minlength'] && name.touched">{{ '3 letters' | translate
+                }}</span>
         </div>
 
         <div class="required-field">
@@ -19,35 +19,34 @@
                 'done': email.touched && !email.errors
               }" #email="ngModel" [(ngModel)]="contactData.email" required type="email"
                 pattern="[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}" id="email" name="email"
-                placeholder="Your email">
+                placeholder="{{ 'Your email' | translate }}">
             <span class="required-span"
-                *ngIf="email.errors?.['required'] && email.touched && !email.errors?.['pattern']">Your email is
-                required</span>
-            <span class="required-span" *ngIf="email.errors?.['pattern'] && email.touched">Please enter a valid email
-                address</span>
+                *ngIf="email.errors?.['required'] && email.touched && !email.errors?.['pattern']">{{ 'email required' |
+                translate }}</span>
+            <span class="required-span" *ngIf="email.errors?.['pattern'] && email.touched">{{ 'email valid' | translate
+                }}</span>
         </div>
 
         <div class="required-field-textarea">
             <textarea
                 [ngClass]="{ 'error-textarea': (message.errors?.['minlength'] || message.errors?.['required']) && message.touched, 'done-textarea': !(message.errors?.['minlength'] || message.errors?.['required']) && message.touched }"
                 #message="ngModel" [(ngModel)]="contactData.message" required id="message" name="message"
-                placeholder="Your message" minlength="4" style="height:200px"></textarea>
+                placeholder="{{ 'Your message' | translate }}" minlength="4" style="height:200px"></textarea>
             <span class="required-span"
-                *ngIf="message.errors?.['required'] && message.touched && !message.errors?.['minlength']">Your message
-                is empty</span>
-            <span class="required-span" *ngIf="message.errors?.['minlength'] && message.touched">Please write at least 3
-                letters</span>
+                *ngIf="message.errors?.['required'] && message.touched && !message.errors?.['minlength']">{{ 'message
+                required' | translate }}</span>
+            <span class="required-span" *ngIf="message.errors?.['minlength'] && message.touched">{{ '3 letters' |
+                translate }}</span>
         </div>
 
         <div class="check-privacy-policy">
             <input #checkbox="ngModel" [(ngModel)]="contactData.checkbox" type="checkbox" required name="checkbox">
-            <span>I've read the <a (click)="scrollUp()" routerLink="/privacy-policy">privacy policy</a> and agree to
-                the
-                processing of my data as outlined.</span>
+            <span>{{ 'Ive read the' | translate }}<a (click)="scrollUp()" routerLink="/privacy-policy">{{ 'privacy
+                    policy' | translate }}</a>{{ 'agree' | translate }}</span>
         </div>
 
         <div class="center">
-            <input [disabled]="!contactForm.valid" type="submit" value="Send message">
+            <input [disabled]="!contactForm.valid" type="submit" value="{{ 'Send message' | translate }}">
         </div>
 
     </form>
