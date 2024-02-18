@@ -41,7 +41,7 @@
 
         <div class="check-privacy-policy">
             <input #checkbox="ngModel" [(ngModel)]="contactData.checkbox" type="checkbox" required name="checkbox">
-            <span>{{ 'Ive read the' | translate }}<a (click)="scrollUp()" routerLink="/privacy-policy">{{ 'privacy
+            <span>{{ 'Ive read the' | translate }}<a routerLink="/privacy-policy" target="_blank">{{ 'privacy
                     policy' | translate }}</a>{{ 'agree' | translate }}</span>
         </div>
 
