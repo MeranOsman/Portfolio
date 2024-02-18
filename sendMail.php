@@ -19,7 +19,7 @@ switch ($_SERVER['REQUEST_METHOD']) {
             $message = $params->message;
     
             $recipient = 'meran.osman@gmx.de';  
-            $subject = "Contact From <$email>";
+            $subject = "Portfolio";
             $message = "Name: " . $name . "<br>Email: " . $email . "<br><br>Message:<br>" . $message ;
     
             $headers   = array();
