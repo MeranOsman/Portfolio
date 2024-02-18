@@ -17,7 +17,7 @@ export class ContactformComponent {
     checkbox: false
   }
   post = {
-    endPoint: 'https://deineDomain.de/sendMail.php',
+    endPoint: 'https://meran-osman.de/sendMail.php',
     body: (payload: any) => JSON.stringify(payload),
     options: {
       headers: {
@@ -26,12 +26,11 @@ export class ContactformComponent {
       },
     },
   };
-  mailTest = true;
   showSuccessText = false;
 
 
   onSubmit(ngForm: NgForm) {
-    if (ngForm.submitted && ngForm.form.valid && !this.mailTest) {
+    if (ngForm.submitted && ngForm.form.valid) {
       this.http.post(this.post.endPoint, this.post.body(this.contactData))
         .subscribe({
           next: (response) => {
@@ -43,9 +42,6 @@ export class ContactformComponent {
           },
           complete: () => console.info('send post complete'),
         });
-    } else if (ngForm.submitted && ngForm.form.valid && this.mailTest) {
-      ngForm.resetForm();
-      this.showSuccessText = true;
     }
   }
 
