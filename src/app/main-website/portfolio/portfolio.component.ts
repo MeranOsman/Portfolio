@@ -21,7 +21,7 @@ export class PortfolioComponent {
       tec: 'JavaScript | HTML | CSS',
       description: 'game',
       githubLink: 'https://github.com/MeranOsman/El-Pollo-Loco',
-      projectLink: 'https://meran-osman.developerakademie.net/el%20pollo%20loco/index.html'
+      projectLink: 'https://meran-osman.developerakademie.net/el-pollo-loco/index.html'
     },
     {
       name: 'This Portfolio',
