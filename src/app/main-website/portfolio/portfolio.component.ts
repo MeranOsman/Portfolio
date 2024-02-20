@@ -13,7 +13,7 @@ export class PortfolioComponent {
       tec: 'JavaScript | HTML | CSS',
       description: 'join description',
       githubLink: 'https://github.com/MeranOsman/Join',
-      projectLink: 'https://meran-osman.developerakademie.net/join/index.html'
+      projectLink: 'https://join.meran-osman.de/'
     },
     {
       name: 'El Pollo Loco',
@@ -21,7 +21,7 @@ export class PortfolioComponent {
       tec: 'JavaScript | HTML | CSS',
       description: 'game',
       githubLink: 'https://github.com/MeranOsman/El-Pollo-Loco',
-      projectLink: 'https://meran-osman.developerakademie.net/el-pollo-loco/index.html'
+      projectLink: 'https://el-pollo-loco.meran-osman.de/'
     },
     {
       name: 'This Portfolio',
