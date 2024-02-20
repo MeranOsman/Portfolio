@@ -1,6 +1,8 @@
 import { Component } from '@angular/core';
 import { NgForm } from '@angular/forms';
 import { HttpClient } from '@angular/common/http';
+import { FormControl, Validators } from '@angular/forms';
+import { AbstractControl, ValidationErrors } from '@angular/forms';
 
 
 @Component({
@@ -10,6 +12,8 @@ import { HttpClient } from '@angular/common/http';
 })
 export class ContactformComponent {
   constructor(private http: HttpClient) { }
+
+  emailForm = new FormControl('', [Validators.required, this.emailValidator]);
 
   contactData = {
     name: '',
@@ -53,5 +57,15 @@ export class ContactformComponent {
       left: 0,
       behavior: "auto"
     });
+  }
+
+
+  emailValidator(control: AbstractControl): ValidationErrors | null {
+    const email = control.value;
+    const pattern = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
+    if (email && !pattern.test(email)) {
+      return { invalidEmail: true };
+    }
+    return null;
   }
 }

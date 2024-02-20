@@ -15,16 +15,15 @@
 
         <div class="required-field">
             <input [ngClass]="{ 
-                'error': (email.errors?.['required'] && email.touched && !email.errors?.['pattern']) || (email.errors?.['pattern'] && email.touched),
-                'done': email.touched && !email.errors
-              }" #email="ngModel" [(ngModel)]="contactData.email" required type="email"
-                pattern="[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}" id="email" name="email"
+                'error': emailForm.invalid && emailForm.touched,
+                'done': !emailForm.invalid && emailForm.touched
+            }" [formControl]="emailForm" type="email" id="email" name="email"
                 placeholder="{{ 'Your email' | translate }}">
             <span class="required-span"
-                *ngIf="email.errors?.['required'] && email.touched && !email.errors?.['pattern']">{{ 'email required' |
-                translate }}</span>
-            <span class="required-span" *ngIf="email.errors?.['pattern'] && email.touched">{{ 'email valid' | translate
-                }}</span>
+                *ngIf="emailForm.invalid && emailForm.touched && !emailForm.errors?.['invalidEmail']">{{ 'email
+                required' | translate }}</span>
+            <span class="required-span" *ngIf="emailForm.errors?.['invalidEmail'] && emailForm.touched">{{ 'email valid'
+                | translate }}</span>
         </div>
 
         <div class="required-field-textarea">
