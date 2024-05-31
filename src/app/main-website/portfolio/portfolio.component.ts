@@ -8,6 +8,14 @@ import { Component } from '@angular/core';
 export class PortfolioComponent {
   projects = [
     {
+      name: 'DABubble',
+      img: 'portfolio.png',
+      tec: 'Angular | TypeScript | Firebase | HTML | SCSS',
+      description: 'portfolio',
+      githubLink: 'https://github.com/MeranOsman/DaBubble/tree/main',
+      projectLink: '#introduction'
+    },
+    {
       name: 'Join',
       img: 'join.png',
       tec: 'JavaScript | HTML | CSS',
@@ -22,14 +30,6 @@ export class PortfolioComponent {
       description: 'game',
       githubLink: 'https://github.com/MeranOsman/El-Pollo-Loco',
       projectLink: 'https://el-pollo-loco.meran-osman.de/'
-    },
-    {
-      name: 'This Portfolio',
-      img: 'portfolio.png',
-      tec: 'Angular | TypeScript | HTML | SCSS',
-      description: 'portfolio',
-      githubLink: 'https://github.com/MeranOsman/portfolio',
-      projectLink: '#introduction'
     }
   ];
 }
