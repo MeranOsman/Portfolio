@@ -11,7 +11,7 @@ export class PortfolioComponent {
       name: 'DABubble',
       img: 'portfolio.png',
       tec: 'Angular | TypeScript | Firebase | HTML | SCSS',
-      description: 'portfolio',
+      description: 'messaging',
       githubLink: 'https://github.com/MeranOsman/DaBubble/tree/main',
       projectLink: '#introduction'
     },
