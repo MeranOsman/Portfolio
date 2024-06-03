@@ -13,7 +13,7 @@ export class PortfolioComponent {
       tec: 'Angular | TypeScript | Firebase | HTML | SCSS',
       description: 'messaging',
       githubLink: 'https://github.com/MeranOsman/DaBubble/tree/main',
-      projectLink: '#introduction'
+      projectLink: 'https://dabubble.meran-osman.de/'
     },
     {
       name: 'Join',
