@@ -9,7 +9,7 @@ export class PortfolioComponent {
   projects = [
     {
       name: 'DABubble',
-      img: 'portfolio.png',
+      img: 'dabubble.png',
       tec: 'Angular | TypeScript | Firebase | HTML | SCSS',
       description: 'messaging',
       githubLink: 'https://github.com/MeranOsman/DaBubble/tree/main',
